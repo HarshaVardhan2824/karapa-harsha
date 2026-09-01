@@ -3,14 +3,6 @@ import { ArrowUpRight, ExternalLink, Github, X } from "lucide-react";
 import { otherProjects, projects, type Project } from "@/lib/portfolio-data";
 import { Reveal, Section } from "./Reveal";
 
-const swatches = [
-  "from-accent/25 to-transparent",
-  "from-sky-500/20 to-transparent",
-  "from-teal-500/20 to-transparent",
-  "from-indigo-500/20 to-transparent",
-  "from-cyan-500/20 to-transparent",
-];
-
 export function Projects() {
   const [active, setActive] = useState<Project | null>(null);
 
@@ -31,7 +23,7 @@ export function Projects() {
               "surface-card flex flex-col overflow-hidden" + (i === 0 ? " md:col-span-2" : "")
             }
           >
-            <ProjectVisual project={project} index={i} wide={i === 0} />
+            <ProjectVisual project={project} />
             <div className="flex flex-1 flex-col p-6">
               <p className="text-xs tracking-wider text-accent uppercase">{project.category}</p>
               <h3 className="mt-2 font-display text-lg font-semibold">{project.title}</h3>
