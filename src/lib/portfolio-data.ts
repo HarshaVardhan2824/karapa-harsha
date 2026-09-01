@@ -1,3 +1,10 @@
+import resumeAsset from "@/assets/Harsha_DataAnalyst_Resume.pdf.asset.json";
+import olistImg from "@/assets/olist.png.asset.json";
+import adventureWorksImg from "@/assets/adventure-works.png.asset.json";
+import bankLoanImg from "@/assets/bank-loan.jpg.asset.json";
+import courseRecImg from "@/assets/course-recommendation.png.asset.json";
+import iplImg from "@/assets/ipl.png.asset.json";
+
 export const profile = {
   name: "Harsha Vardhan Raju Karapa",
   shortName: "Harsha Vardhan",
@@ -6,7 +13,7 @@ export const profile = {
   email: "harshavardhan.karapa@gmail.com",
   linkedin: "https://www.linkedin.com/in/harsha-vardhan-raju-karapa/",
   github: "https://github.com/HarshaVardhan2824",
-  resume: "/assets/Harsha_DataAnalyst_Resume.pdf",
+  resume: resumeAsset.url,
 };
 
 export const navLinks = [
@@ -126,6 +133,8 @@ export const skillCategories = [
 export type Project = {
   id: string;
   title: string;
+  image: string;
+  imageAlt: string;
   category: string;
   description: string;
   tech: string[];
@@ -139,6 +148,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "olist",
+    image: olistImg.url,
+    imageAlt: "Olist e-commerce sales and delivery analysis dashboard",
     title: "Olist E-Commerce Store Analysis",
     category: "Analytics • BI",
     description:
@@ -154,6 +165,8 @@ export const projects: Project[] = [
   },
   {
     id: "adventure-works",
+    image: adventureWorksImg.url,
+    imageAlt: "Adventure Works sales and profit Power BI dashboard",
     title: "Adventure Works – Sales & Profit Analysis",
     category: "Business Intelligence",
     description:
@@ -169,6 +182,8 @@ export const projects: Project[] = [
   },
   {
     id: "bank-loan",
+    image: bankLoanImg.url,
+    imageAlt: "Bank loan customer analytics dashboard",
     title: "Bank Loan Customer Analytics",
     category: "Analytics • Risk",
     description:
@@ -184,6 +199,8 @@ export const projects: Project[] = [
   },
   {
     id: "course-recommendation",
+    image: courseRecImg.url,
+    imageAlt: "Online course recommendation system Streamlit app",
     title: "Online Course Recommendation System",
     category: "Data Science",
     description:
@@ -199,6 +216,8 @@ export const projects: Project[] = [
   },
   {
     id: "ipl",
+    image: iplImg.url,
+    imageAlt: "IPL match winner prediction Streamlit app",
     title: "IPL Match Winner Prediction",
     category: "Machine Learning",
     description:
