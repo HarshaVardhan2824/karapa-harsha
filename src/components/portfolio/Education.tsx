@@ -3,7 +3,9 @@ import { certifications, education } from "@/lib/portfolio-data";
 import { Reveal, Section } from "./Reveal";
 
 export function Education() {
-  const [primary, ...rest] = education;
+  const primary = education[0]!;
+  const rest = education.slice(1);
+
 
   return (
     <Section id="education" eyebrow="Education" title="Education & Certifications">
