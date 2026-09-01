@@ -113,42 +113,15 @@ export function Projects() {
   );
 }
 
-function ProjectVisual({
-  project,
-  index,
-  wide,
-}: {
-  project: Project;
-  index: number;
-  wide?: boolean;
-}) {
+function ProjectVisual({ project }: { project: Project }) {
   return (
-    <div
-      className={
-        "relative border-b border-border bg-surface " + (wide ? "aspect-[16/6]" : "aspect-[16/9]")
-      }
-      title={`Image placeholder — add a real screenshot for ${project.title}`}
-    >
-      <div
-        className={`absolute inset-0 bg-gradient-to-br ${swatches[index % swatches.length]}`}
-        aria-hidden="true"
+    <div className="relative aspect-[16/9] max-h-72 overflow-hidden border-b border-border bg-surface">
+      <img
+        src={project.image}
+        alt={project.imageAlt}
+        loading="lazy"
+        className="h-full w-full object-cover object-top"
       />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 opacity-[0.5]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px)",
-          backgroundSize: "44px 44px",
-        }}
-      />
-      <div className="relative flex h-full flex-col items-center justify-center gap-2 px-6 text-center">
-        <p className="font-display text-sm font-semibold text-foreground/85">{project.title}</p>
-        <p className="text-[11px] text-muted-foreground">
-          Screenshot placeholder — replace with a real dashboard image at{" "}
-          <span className="text-foreground/70">public/assets/projects/{project.id}.png</span>
-        </p>
-      </div>
     </div>
   );
 }
