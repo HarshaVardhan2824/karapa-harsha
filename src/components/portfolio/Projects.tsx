@@ -3,14 +3,6 @@ import { ArrowUpRight, ExternalLink, Github, X } from "lucide-react";
 import { otherProjects, projects, type Project } from "@/lib/portfolio-data";
 import { Reveal, Section } from "./Reveal";
 
-const swatches = [
-  "from-accent/25 to-transparent",
-  "from-sky-500/20 to-transparent",
-  "from-teal-500/20 to-transparent",
-  "from-indigo-500/20 to-transparent",
-  "from-cyan-500/20 to-transparent",
-];
-
 export function Projects() {
   const [active, setActive] = useState<Project | null>(null);
 
@@ -31,7 +23,7 @@ export function Projects() {
               "surface-card flex flex-col overflow-hidden" + (i === 0 ? " md:col-span-2" : "")
             }
           >
-            <ProjectVisual project={project} index={i} wide={i === 0} />
+            <ProjectVisual project={project} />
             <div className="flex flex-1 flex-col p-6">
               <p className="text-xs tracking-wider text-accent uppercase">{project.category}</p>
               <h3 className="mt-2 font-display text-lg font-semibold">{project.title}</h3>
@@ -113,42 +105,15 @@ export function Projects() {
   );
 }
 
-function ProjectVisual({
-  project,
-  index,
-  wide,
-}: {
-  project: Project;
-  index: number;
-  wide?: boolean;
-}) {
+function ProjectVisual({ project }: { project: Project }) {
   return (
-    <div
-      className={
-        "relative border-b border-border bg-surface " + (wide ? "aspect-[16/6]" : "aspect-[16/9]")
-      }
-      title={`Image placeholder — add a real screenshot for ${project.title}`}
-    >
-      <div
-        className={`absolute inset-0 bg-gradient-to-br ${swatches[index % swatches.length]}`}
-        aria-hidden="true"
+    <div className="relative aspect-[16/9] max-h-72 overflow-hidden border-b border-border bg-surface">
+      <img
+        src={project.image}
+        alt={project.imageAlt}
+        loading="lazy"
+        className="h-full w-full object-cover object-top"
       />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 opacity-[0.5]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px)",
-          backgroundSize: "44px 44px",
-        }}
-      />
-      <div className="relative flex h-full flex-col items-center justify-center gap-2 px-6 text-center">
-        <p className="font-display text-sm font-semibold text-foreground/85">{project.title}</p>
-        <p className="text-[11px] text-muted-foreground">
-          Screenshot placeholder — replace with a real dashboard image at{" "}
-          <span className="text-foreground/70">public/assets/projects/{project.id}.png</span>
-        </p>
-      </div>
     </div>
   );
 }
