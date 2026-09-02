@@ -263,9 +263,12 @@ export const research = {
   subtitle: "Published Conference Paper • ICCSCE 2025",
   description:
     "Designed and fabricated a flexible dual-band microstrip patch antenna using HFSS for biomedical hyperthermia applications.",
+  paperUrl: "https://www.atlantis-press.com/proceedings/iccsce-25/126017381",
+  doi: "10.2991/978-94-6463-858-5_238",
+  doiUrl: "https://doi.org/10.2991/978-94-6463-858-5_238",
   details: [
     "Jeans substrate",
-    "45 × 30 × 1.3 mm³",
+    "40 × 35 × 1.3 mm³",
     "Relative permittivity: 1.7",
     "Dual-band operation: 2.4 GHz and 7.9 GHz",
     "Modified slot-based patch design",
@@ -283,15 +286,16 @@ export const research = {
     "Fabrication",
     "VNA Validation",
   ],
-  visuals: [
-    "Final antenna design",
-    "S11 / return-loss graph",
-    "VSWR plot",
-    "3D gain pattern",
-    "Bending simulation",
-    "SAR simulation",
-    "Fabricated antenna photograph",
+  gallery: [
+    { caption: "Antenna Design", src: antennaDesignImg.url },
+    { caption: "S11 / Return Loss", src: antennaS11Img.url },
+    { caption: "VSWR", src: antennaVswrImg.url },
+    { caption: "3D Gain Pattern", src: antennaGainImg.url },
+    { caption: "Bending Analysis", src: antennaBendingImg.url },
+    { caption: "SAR Analysis", src: antennaSarImg.url },
+    { caption: "Fabricated Antenna", src: antennaFinalImg.url },
   ],
+  heroImage: antennaFinalImg.url,
   conference:
     "International Conference on Computer Science and Communication Engineering (ICCSCE 2025)",
   authors: "K. Harsha Vardhan Raju and co-authors",
