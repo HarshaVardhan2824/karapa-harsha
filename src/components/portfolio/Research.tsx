@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FileText, Radio, X } from "lucide-react";
+import { ExternalLink, Radio, X } from "lucide-react";
 import { research } from "@/lib/portfolio-data";
 import { Reveal, Section } from "./Reveal";
 
@@ -13,52 +13,64 @@ export function Research() {
       title="Research & Engineering"
       description="My engineering background — a published conference paper from my B.Tech in Electronics & Communication Engineering."
     >
-      <Reveal className="surface-card p-7">
-        <div className="flex flex-wrap items-start justify-between gap-4">
-          <div className="max-w-2xl">
+      <Reveal className="surface-card p-6 sm:p-7">
+        <div className="grid gap-7 lg:grid-cols-[1.35fr_0.65fr] lg:items-start">
+          <div>
             <p className="inline-flex items-center gap-2 text-xs tracking-wider text-accent uppercase">
               <Radio className="size-4" aria-hidden="true" />
               {research.subtitle}
             </p>
-            <h3 className="mt-3 font-display text-xl leading-snug font-semibold">
+            <h3 className="mt-3 font-display text-xl leading-snug font-semibold text-foreground">
               {research.title}
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-foreground/80">
               {research.description}
             </p>
+
+            <ol className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-2 text-xs text-foreground/75">
+              {research.story.map((step, i) => (
+                <li key={step} className="flex items-center gap-2">
+                  <span className="rounded border border-border bg-surface px-2.5 py-1">{step}</span>
+                  {i < research.story.length - 1 ? (
+                    <span aria-hidden="true" className="text-border-strong">
+                      →
+                    </span>
+                  ) : null}
+                </li>
+              ))}
+            </ol>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a
+                href={research.paperUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-border-strong px-4 py-2 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
+              >
+                View Published Paper
+                <ExternalLink className="size-4" aria-hidden="true" />
+              </a>
+              <button
+                type="button"
+                onClick={() => setOpen(true)}
+                className="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground"
+              >
+                View Research
+              </button>
+            </div>
           </div>
-        </div>
 
-        <ol className="mt-7 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-          {research.story.map((step, i) => (
-            <li key={step} className="flex items-center gap-2">
-              <span className="rounded border border-border bg-surface px-2.5 py-1">{step}</span>
-              {i < research.story.length - 1 ? (
-                <span aria-hidden="true" className="text-border-strong">
-                  →
-                </span>
-              ) : null}
-            </li>
-          ))}
-        </ol>
-
-        <div className="mt-7 flex flex-wrap gap-3">
-          <a
-            href="#research"
-            aria-disabled="true"
-            title="Paper link placeholder — add the published paper URL when available"
-            className="inline-flex items-center gap-2 rounded-md border border-border-strong px-4 py-2 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
-          >
-            <FileText className="size-4" aria-hidden="true" />
-            View Paper
-          </a>
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            className="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground"
-          >
-            View Research
-          </button>
+          <figure className="overflow-hidden rounded-lg border border-border-strong bg-surface">
+            <img
+              src={research.heroImage}
+              alt="Fabricated flexible dual-band microstrip patch antenna on jeans substrate"
+              loading="lazy"
+              className="aspect-square w-full object-cover"
+            />
+            <figcaption className="border-t border-border px-3 py-2 text-center text-xs text-foreground/70">
+              Fabricated antenna prototype
+            </figcaption>
+          </figure>
         </div>
       </Reveal>
 
@@ -77,7 +89,7 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
       onClick={onClose}
     >
       <div
-        className="relative my-6 w-full max-w-3xl rounded-lg border border-border-strong bg-card p-7 shadow-elegant"
+        className="relative my-6 w-full max-w-3xl rounded-lg border border-border-strong bg-card p-5 shadow-elegant sm:p-7"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -89,13 +101,13 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
           <X className="size-4" aria-hidden="true" />
         </button>
         <p className="text-xs tracking-wider text-accent uppercase">{research.subtitle}</p>
-        <h3 className="mt-2 pr-10 font-display text-xl leading-snug font-semibold">
+        <h3 className="mt-2 pr-10 font-display text-xl leading-snug font-semibold text-foreground">
           {research.title}
         </h3>
-        <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{research.description}</p>
+        <p className="mt-4 text-sm leading-relaxed text-foreground/80">{research.description}</p>
 
-        <h4 className="mt-8 text-sm font-semibold">Technical details</h4>
-        <ul className="mt-3 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
+        <h4 className="mt-8 text-sm font-semibold text-foreground">Technical details</h4>
+        <ul className="mt-3 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
           {research.details.map((detail) => (
             <li key={detail} className="flex gap-2">
               <span aria-hidden="true" className="text-accent">
@@ -106,32 +118,52 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
           ))}
         </ul>
 
-        <h4 className="mt-8 text-sm font-semibold">Selected visuals</h4>
-        <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {research.visuals.map((visual) => (
+        <h4 className="mt-8 text-sm font-semibold text-foreground">Selected visuals</h4>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {research.gallery.map((item) => (
             <figure
-              key={visual}
-              className="rounded-md border border-border bg-surface p-4 text-center"
+              key={item.caption}
+              className="overflow-hidden rounded-md border border-border bg-surface"
             >
-              <div className="mb-3 aspect-[4/3] rounded bg-[radial-gradient(circle_at_35%_25%,var(--surface-elevated),var(--surface))]" />
-              <figcaption className="text-[11px] leading-relaxed text-muted-foreground">
-                {visual}
-                <span className="mt-1 block text-foreground/60">image placeholder</span>
+              <img
+                src={item.src}
+                alt={item.caption}
+                loading="lazy"
+                className="block w-full object-contain"
+              />
+              <figcaption className="border-t border-border px-3 py-2 text-xs text-foreground/75">
+                {item.caption}
               </figcaption>
             </figure>
           ))}
         </div>
-        <p className="mt-4 text-[11px] text-muted-foreground">
-          Replace these placeholders with the actual figures at{" "}
-          <span className="text-foreground/70">public/assets/research/</span>.
-        </p>
 
-        <h4 className="mt-8 text-sm font-semibold">Publication</h4>
-        <p className="mt-2 text-sm text-muted-foreground">{research.conference}</p>
-        <p className="mt-1 text-sm text-muted-foreground">Authors: {research.authors}</p>
-        <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-          This is a research and design project intended for biomedical hyperthermia applications. It
-          makes no claim of clinical effectiveness or medical treatment approval.
+        <h4 className="mt-8 text-sm font-semibold text-foreground">Publication</h4>
+        <p className="mt-2 text-sm text-foreground/80">{research.conference}</p>
+        <p className="mt-1 text-sm text-foreground/80">Authors: {research.authors}</p>
+        <p className="mt-1 text-sm text-foreground/80">
+          DOI:{" "}
+          <a
+            href={research.doiUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-accent underline-offset-4 hover:underline"
+          >
+            {research.doi}
+          </a>
+        </p>
+        <a
+          href={research.paperUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-5 inline-flex items-center gap-2 rounded-md border border-border-strong px-4 py-2 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
+        >
+          View Published Paper
+          <ExternalLink className="size-4" aria-hidden="true" />
+        </a>
+        <p className="mt-5 text-xs leading-relaxed text-foreground/70">
+          This is an academic engineering research project. It makes no claim of clinical
+          effectiveness or medical treatment approval.
         </p>
       </div>
     </div>
