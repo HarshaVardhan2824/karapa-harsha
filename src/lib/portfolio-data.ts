@@ -4,6 +4,13 @@ import adventureWorksImg from "@/assets/adventure-works.png.asset.json";
 import bankLoanImg from "@/assets/bank-loan.jpg.asset.json";
 import courseRecImg from "@/assets/course-recommendation.png.asset.json";
 import iplImg from "@/assets/ipl.png.asset.json";
+import antennaDesignImg from "@/assets/antenna-design.png.asset.json";
+import antennaS11Img from "@/assets/antenna-s11.png.asset.json";
+import antennaVswrImg from "@/assets/antenna-vswr.png.asset.json";
+import antennaGainImg from "@/assets/antenna-gain.png.asset.json";
+import antennaBendingImg from "@/assets/antenna-bending.png.asset.json";
+import antennaSarImg from "@/assets/antenna-sar.png.asset.json";
+import antennaFinalImg from "@/assets/antenna-final.jpeg.asset.json";
 
 export const profile = {
   name: "Harsha Vardhan Raju Karapa",
