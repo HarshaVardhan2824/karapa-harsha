@@ -103,22 +103,11 @@ function ProfilePortrait() {
       />
       <div className="relative overflow-hidden rounded-lg border border-border-strong bg-surface">
         <div className="aspect-[4/5] w-full">
-          {/*
-            Replace this placeholder with the professional photo:
-            1. Save the photo as: public/assets/harsha-profile.jpg
-            2. Swap the block below for:
-               <img src="/assets/harsha-profile.jpg" alt="Harsha Vardhan Raju Karapa" className="h-full w-full object-cover" />
-          */}
-          <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-[radial-gradient(circle_at_30%_20%,var(--surface-elevated),var(--surface))]">
-            <span className="font-display text-5xl font-semibold tracking-tight text-foreground/80">
-              HK
-            </span>
-            <p className="max-w-[80%] text-center text-xs leading-relaxed text-muted-foreground">
-              Professional photo placeholder — add
-              <span className="text-foreground/80"> public/assets/harsha-profile.jpg</span> and
-              replace this block in <span className="text-foreground/80">Hero.tsx</span>.
-            </p>
-          </div>
+          <img
+            src={profileImg.url}
+            alt="Harsha Vardhan Raju Karapa, Data Analyst"
+            className="h-full w-full object-cover object-top"
+          />
         </div>
       </div>
       <figcaption className="mt-4 text-center text-xs text-muted-foreground">
