@@ -123,7 +123,7 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
           {research.gallery.map((item) => (
             <figure
               key={item.caption}
-              className="overflow-hidden rounded-md border border-border bg-surface"
+              className="self-start overflow-hidden rounded-md border border-border bg-surface"
             >
               <img
                 src={item.src}
