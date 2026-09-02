@@ -1,6 +1,7 @@
 import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { profile } from "@/lib/portfolio-data";
 import { Reveal } from "./Reveal";
+import profileImg from "@/assets/harsha-profile.jpg.asset.json";
 
 export function Hero() {
   return (
