@@ -5,7 +5,7 @@ export function About() {
   return (
     <Section id="about" eyebrow="About" title="About Me">
       <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-        <Reveal className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <Reveal className="max-w-[62ch] space-y-5 text-base leading-[1.75] text-foreground/80">
           <p>
             I work across the full analytics workflow — from cleaning and validating raw data to
             delivering dashboards and models that answer business questions. My internship experience
