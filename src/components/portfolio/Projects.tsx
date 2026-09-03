@@ -83,8 +83,8 @@ export function Projects() {
           {otherProjects.map((item) => (
             <Reveal key={item.title} className="surface-card flex items-center gap-4 p-4">
               <div className="min-w-0">
-                <p className="truncate font-display text-sm font-semibold">{item.title}</p>
-                <p className="mt-1 truncate text-xs text-muted-foreground">{item.description}</p>
+                <p className="font-display text-sm font-semibold">{item.title}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{item.description}</p>
               </div>
               <a
                 href={item.github}
