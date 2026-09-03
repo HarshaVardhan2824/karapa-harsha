@@ -100,7 +100,7 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
         >
           <X className="size-4" aria-hidden="true" />
         </button>
-        <p className="text-xs tracking-wider text-accent uppercase">{research.subtitle}</p>
+        <p className="pr-12 text-xs tracking-wider text-accent uppercase">{research.subtitle}</p>
         <h3 className="mt-2 pr-10 font-display text-xl leading-snug font-semibold text-foreground">
           {research.title}
         </h3>
