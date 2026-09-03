@@ -119,11 +119,11 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
         </ul>
 
         <h4 className="mt-8 text-sm font-semibold text-foreground">Selected visuals</h4>
-        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-4 gap-4 sm:columns-2 [column-gap:1rem]">
           {research.gallery.map((item) => (
             <figure
               key={item.caption}
-              className="self-start overflow-hidden rounded-md border border-border bg-surface"
+              className="mb-4 break-inside-avoid overflow-hidden rounded-md border border-border bg-surface"
             >
               <img
                 src={item.src}
@@ -137,6 +137,7 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
             </figure>
           ))}
         </div>
+
 
         <h4 className="mt-8 text-sm font-semibold text-foreground">Publication</h4>
         <p className="mt-2 text-sm text-foreground/80">{research.conference}</p>
