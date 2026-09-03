@@ -14,7 +14,7 @@ export function Research() {
       description="My engineering background — a published conference paper from my B.Tech in Electronics & Communication Engineering."
     >
       <Reveal className="surface-card p-6 sm:p-7">
-        <div className="grid gap-7 lg:grid-cols-[1.35fr_0.65fr] lg:items-start">
+        <div className="grid grid-cols-1 gap-7 lg:grid-cols-[1.35fr_0.65fr] lg:items-start">
           <div>
             <p className="inline-flex items-center gap-2 text-xs tracking-wider text-accent uppercase">
               <Radio className="size-4" aria-hidden="true" />
@@ -100,14 +100,14 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
         >
           <X className="size-4" aria-hidden="true" />
         </button>
-        <p className="text-xs tracking-wider text-accent uppercase">{research.subtitle}</p>
+        <p className="pr-12 text-xs tracking-wider text-accent uppercase">{research.subtitle}</p>
         <h3 className="mt-2 pr-10 font-display text-xl leading-snug font-semibold text-foreground">
           {research.title}
         </h3>
         <p className="mt-4 text-sm leading-relaxed text-foreground/80">{research.description}</p>
 
         <h4 className="mt-8 text-sm font-semibold text-foreground">Technical details</h4>
-        <ul className="mt-3 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
+        <ul className="mt-3 grid grid-cols-1 gap-2 text-sm text-foreground/80 sm:grid-cols-2">
           {research.details.map((detail) => (
             <li key={detail} className="flex gap-2">
               <span aria-hidden="true" className="text-accent">
@@ -119,11 +119,11 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
         </ul>
 
         <h4 className="mt-8 text-sm font-semibold text-foreground">Selected visuals</h4>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <div className="mt-4 gap-4 sm:columns-2 [column-gap:1rem]">
           {research.gallery.map((item) => (
             <figure
               key={item.caption}
-              className="self-start overflow-hidden rounded-md border border-border bg-surface"
+              className="mb-4 break-inside-avoid overflow-hidden rounded-md border border-border bg-surface"
             >
               <img
                 src={item.src}
@@ -137,6 +137,7 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
             </figure>
           ))}
         </div>
+
 
         <h4 className="mt-8 text-sm font-semibold text-foreground">Publication</h4>
         <p className="mt-2 text-sm text-foreground/80">{research.conference}</p>

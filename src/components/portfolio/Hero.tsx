@@ -10,7 +10,7 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-accent/10 blur-[140px]"
       />
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 pt-16 pb-20 sm:pt-24 sm:pb-28 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-6 pt-16 pb-20 sm:pt-24 sm:pb-28 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
           <Reveal>
             <p className="eyebrow">Data Analyst • Data Science • Business Intelligence</p>

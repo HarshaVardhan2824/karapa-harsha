@@ -9,7 +9,7 @@ export function Education() {
 
   return (
     <Section id="education" eyebrow="Education" title="Education & Certifications">
-      <div className="grid gap-10 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
         <div>
           <Reveal className="surface-card p-6">
             <p className="inline-flex items-center gap-2 text-xs tracking-wider text-accent uppercase">
@@ -23,7 +23,7 @@ export function Education() {
             <p className="mt-3 font-mono text-sm text-foreground">{primary.meta}</p>
           </Reveal>
 
-          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {rest.map((item, i) => (
               <Reveal as="li" key={item.degree} delay={i * 70} className="surface-card p-4">
                 <p className="font-display text-sm font-semibold">{item.degree}</p>
@@ -37,7 +37,7 @@ export function Education() {
           <Reveal>
             <h3 className="text-base font-semibold">Certifications</h3>
           </Reveal>
-          <ul className="mt-4 grid gap-3">
+          <ul className="mt-4 grid grid-cols-1 gap-3">
             {certifications.map((cert, i) => (
               <Reveal
                 as="li"
