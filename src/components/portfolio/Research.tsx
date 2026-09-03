@@ -107,7 +107,7 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
         <p className="mt-4 text-sm leading-relaxed text-foreground/80">{research.description}</p>
 
         <h4 className="mt-8 text-sm font-semibold text-foreground">Technical details</h4>
-        <ul className="mt-3 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
+        <ul className="mt-3 grid grid-cols-1 gap-2 text-sm text-foreground/80 sm:grid-cols-2">
           {research.details.map((detail) => (
             <li key={detail} className="flex gap-2">
               <span aria-hidden="true" className="text-accent">
@@ -119,7 +119,7 @@ function ResearchDialog({ onClose }: { onClose: () => void }) {
         </ul>
 
         <h4 className="mt-8 text-sm font-semibold text-foreground">Selected visuals</h4>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {research.gallery.map((item) => (
             <figure
               key={item.caption}

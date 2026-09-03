@@ -9,7 +9,7 @@ export function Skills() {
       title="Technical Skills"
       description="Tools and techniques I use across analytics, business intelligence, and data science work."
     >
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         {skillCategories.map((category, i) => (
           <Reveal key={category.title} delay={i * 60} className="surface-card p-6">
             <h3 className="font-display text-base font-semibold">{category.title}</h3>

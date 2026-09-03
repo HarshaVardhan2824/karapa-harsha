@@ -23,7 +23,7 @@ export function About() {
           </p>
         </Reveal>
 
-        <ul className="grid gap-4 sm:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {highlights.map((item, i) => (
             <Reveal as="li" key={item.label} delay={i * 70} className="surface-card p-5">
               <p className="text-xs tracking-wider text-muted-foreground uppercase">{item.label}</p>
@@ -39,7 +39,7 @@ export function About() {
         <Reveal>
           <h3 className="text-xl font-semibold">What I Do</h3>
         </Reveal>
-        <div className="mt-6 grid gap-5 md:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
           {whatIDo.map((card, i) => (
             <Reveal as="article" key={card.title} delay={i * 90} className="surface-card p-6">
               <h4 className="font-display text-lg font-semibold">{card.title}</h4>

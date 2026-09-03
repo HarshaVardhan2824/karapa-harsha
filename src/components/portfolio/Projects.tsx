@@ -13,7 +13,7 @@ export function Projects() {
       title="Featured Projects"
       description="Analytics, business intelligence and machine learning projects built end to end — from raw data to dashboards and deployed models."
     >
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {projects.map((project, i) => (
           <Reveal
             as="article"
@@ -79,7 +79,7 @@ export function Projects() {
         <Reveal>
           <h3 className="text-base font-semibold">Other Work</h3>
         </Reveal>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {otherProjects.map((item) => (
             <Reveal key={item.title} className="surface-card flex items-center gap-4 p-4">
               <div className="min-w-0">
