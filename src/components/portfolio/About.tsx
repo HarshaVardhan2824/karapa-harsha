@@ -4,7 +4,7 @@ import { Reveal, Section } from "./Reveal";
 export function About() {
   return (
     <Section id="about" eyebrow="About" title="About Me">
-      <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr]">
         <Reveal className="max-w-[62ch] space-y-5 text-base leading-[1.75] text-foreground/80">
           <p>
             I work across the full analytics workflow — from cleaning and validating raw data to

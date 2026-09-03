@@ -14,7 +14,7 @@ export function Research() {
       description="My engineering background — a published conference paper from my B.Tech in Electronics & Communication Engineering."
     >
       <Reveal className="surface-card p-6 sm:p-7">
-        <div className="grid gap-7 lg:grid-cols-[1.35fr_0.65fr] lg:items-start">
+        <div className="grid grid-cols-1 gap-7 lg:grid-cols-[1.35fr_0.65fr] lg:items-start">
           <div>
             <p className="inline-flex items-center gap-2 text-xs tracking-wider text-accent uppercase">
               <Radio className="size-4" aria-hidden="true" />
