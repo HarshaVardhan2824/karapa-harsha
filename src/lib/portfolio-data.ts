@@ -1,16 +1,16 @@
-import resumeAsset from "@/assets/Harsha_DataAnalyst_Resume.pdf.asset.json";
-import olistImg from "@/assets/olist.png.asset.json";
-import adventureWorksImg from "@/assets/adventure-works.png.asset.json";
-import bankLoanImg from "@/assets/bank-loan.jpg.asset.json";
-import courseRecImg from "@/assets/course-recommendation.png.asset.json";
-import iplImg from "@/assets/ipl.png.asset.json";
-import antennaDesignImg from "@/assets/antenna-design.png.asset.json";
-import antennaS11Img from "@/assets/antenna-s11.png.asset.json";
-import antennaVswrImg from "@/assets/antenna-vswr.png.asset.json";
-import antennaGainImg from "@/assets/antenna-gain.png.asset.json";
-import antennaBendingImg from "@/assets/antenna-bending.png.asset.json";
-import antennaSarImg from "@/assets/antenna-sar.png.asset.json";
-import antennaFinalImg from "@/assets/antenna-final.jpeg.asset.json";
+import resumeAsset from "@/assets/Harsha_DataAnalyst_Resume.pdf";
+import olistImg from "@/assets/olist.png";
+import adventureWorksImg from "@/assets/adventure-works.png";
+import bankLoanImg from "@/assets/bank-loan.jpeg";
+import courseRecImg from "@/assets/course-recommendation.png";
+import iplImg from "@/assets/ipl.png";
+import antennaDesignImg from "@/assets/antenna-design.png";
+import antennaS11Img from "@/assets/antenna-s11.png";
+import antennaVswrImg from "@/assets/antenna-vswr.png";
+import antennaGainImg from "@/assets/antenna-gain.png";
+import antennaBendingImg from "@/assets/antenna-bending.png";
+import antennaSarImg from "@/assets/antenna-sar.png";
+import antennaFinalImg from "@/assets/antenna-final.jpeg";
 
 export const profile = {
   name: "Harsha Vardhan Raju Karapa",
@@ -20,7 +20,7 @@ export const profile = {
   email: "harshavardhan.karapa@gmail.com",
   linkedin: "https://www.linkedin.com/in/harsha-vardhan-raju-karapa/",
   github: "https://github.com/HarshaVardhan2824",
-  resume: resumeAsset.url,
+  resume: resumeAsset,
 };
 
 export const navLinks = [
@@ -155,7 +155,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "olist",
-    image: olistImg.url,
+    image: olistImg,
     imageAlt: "Olist e-commerce sales and delivery analysis dashboard",
     title: "Olist E-Commerce Store Analysis",
     category: "Analytics • BI",
@@ -172,7 +172,7 @@ export const projects: Project[] = [
   },
   {
     id: "adventure-works",
-    image: adventureWorksImg.url,
+    image: adventureWorksImg,
     imageAlt: "Adventure Works sales and profit Power BI dashboard",
     title: "Adventure Works – Sales & Profit Analysis",
     category: "Business Intelligence",
@@ -189,7 +189,7 @@ export const projects: Project[] = [
   },
   {
     id: "bank-loan",
-    image: bankLoanImg.url,
+    image: bankLoanImg,
     imageAlt: "Bank loan customer analytics dashboard",
     title: "Bank Loan Customer Analytics",
     category: "Analytics • Risk",
@@ -206,7 +206,7 @@ export const projects: Project[] = [
   },
   {
     id: "course-recommendation",
-    image: courseRecImg.url,
+    image: courseRecImg,
     imageAlt: "Online course recommendation system Streamlit app",
     title: "Online Course Recommendation System",
     category: "Data Science",
@@ -223,7 +223,7 @@ export const projects: Project[] = [
   },
   {
     id: "ipl",
-    image: iplImg.url,
+    image: iplImg,
     imageAlt: "IPL match winner prediction Streamlit app",
     title: "IPL Match Winner Prediction",
     category: "Machine Learning",
@@ -294,15 +294,15 @@ export const research = {
     "VNA Validation",
   ],
   gallery: [
-    { caption: "Antenna Design", src: antennaDesignImg.url },
-    { caption: "S11 / Return Loss", src: antennaS11Img.url },
-    { caption: "VSWR", src: antennaVswrImg.url },
-    { caption: "3D Gain Pattern", src: antennaGainImg.url },
-    { caption: "Bending Analysis", src: antennaBendingImg.url },
-    { caption: "SAR Analysis", src: antennaSarImg.url },
-    { caption: "Fabricated Antenna", src: antennaFinalImg.url },
+    { caption: "Antenna Design", src: antennaDesignImg },
+    { caption: "S11 / Return Loss", src: antennaS11Img },
+    { caption: "VSWR", src: antennaVswrImg },
+    { caption: "3D Gain Pattern", src: antennaGainImg },
+    { caption: "Bending Analysis", src: antennaBendingImg },
+    { caption: "SAR Analysis", src: antennaSarImg },
+    { caption: "Fabricated Antenna", src: antennaFinalImg },
   ],
-  heroImage: antennaFinalImg.url,
+  heroImage: antennaFinalImg,
   conference:
     "International Conference on Computer Science and Communication Engineering (ICCSCE 2025)",
   authors: "K. Harsha Vardhan Raju and co-authors",
