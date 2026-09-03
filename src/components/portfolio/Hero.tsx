@@ -1,7 +1,7 @@
 import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { profile } from "@/lib/portfolio-data";
 import { Reveal } from "./Reveal";
-import profileImg from "@/assets/harsha-portrait.jpg.asset.json";
+import profileImg from "@/assets/harsha-portrait.jpg";
 
 export function Hero() {
   return (
@@ -105,7 +105,7 @@ function ProfilePortrait() {
       <div className="relative overflow-hidden rounded-lg border border-border-strong bg-surface">
         <div className="aspect-[4/5] w-full">
           <img
-            src={profileImg.url}
+            src={profileImg}
             alt="Harsha Vardhan Raju Karapa, Data Analyst"
             className="h-full w-full object-cover object-center"
           />
